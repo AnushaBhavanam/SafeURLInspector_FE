@@ -1,0 +1,33 @@
+.form{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+.form submit{
+  font-size: 35px;
+}
+.result-box {
+        text-align: center;
+    }
+
+.result-box table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: grey; }
+
+.result-box th, .result-box td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.result-box h3 {
+    background-color: none;
+    text-align: center;
+    color: white;
+}
+caption {
+    caption-side: top;
+}

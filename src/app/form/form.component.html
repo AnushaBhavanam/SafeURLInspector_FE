@@ -1,0 +1,39 @@
+<div class="form">
+    <form (ngSubmit)="submitForm()">
+      <label for="parameter" style="font-size: 35px;">Enter Text/URL:</label>
+      <input type="text" id="parameter" [(ngModel)]="inputParameter" name="inputParameter" style="font-size: 35px;">
+      <button type="submit" style="font-size: 35px;">Submit</button>
+    </form>
+    <br>
+    <div class="result-box" *ngIf="output">
+      <table class="table table-striped">
+        <caption><h3>Report Summary</h3></caption>
+        <tbody>
+            <tr>
+              <td width="260">
+              <span class="font-bold"> Parameter </span>
+              </td>
+              <td width="260">
+              <span class="font-bold">{{this.inputParameter}}</span>
+              </td>
+            </tr>
+            <tr>
+              <td width="260">
+              <span class="font-bold"> Parameter </span>
+              </td>
+              <td width="260">
+              <span class="font-bold">{{this.isParameterPassed ? 'Yes' : 'No'}}</span>
+              </td>
+            </tr>
+            <tr>
+              <td width="260">
+              <span class="font-bold"> Parameter </span>
+              </td>
+              <td width="260">
+              <span class="font-bold">{{this.otherParameters}}</span>
+              </td>
+            </tr>
+            </tbody>
+      </table>
+    </div>
+    </div>

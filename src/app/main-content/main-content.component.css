@@ -1,0 +1,18 @@
+.main-content{
+    text-align: center;
+}
+
+.particles-js-canvas-el {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+h2{
+  font-family: sans-serif;
+  color:white;
+}
+p{
+  color:white;
+  font-size: 20px;
+}
