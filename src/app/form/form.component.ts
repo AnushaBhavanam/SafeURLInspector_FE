@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-form',
@@ -7,49 +8,31 @@ import { Component } from '@angular/core';
 })
 export class FormComponent {
   inputParameter: string = '';
-  output: string = '';
-  isParameterPassed: boolean = false;
-  otherParameters: string = '';
+  joutput: any = null
+  ssl_pull_error: string = ""
+  constructor(private apiService: ApiService) {}
 
   submitForm() {
-    this.isParameterPassed = this.inputParameter.trim() !== '';
-    this.otherParameters = this.inputParameter;
+    const requestData = {
+      uuid: '65162fb6-21de-4c13-9858-4ba2509e4439',
+      text: this.inputParameter,
+    };
 
-    // Generate the report summary in table format.
-    this.generateReportSummary();
+    this.apiService.postData(requestData).subscribe(
+      (response) => {
+        this.joutput = response;
+        if(this.joutput.ssl_cert.SSLPullError){
+          this.ssl_pull_error = this.joutput.ssl_cert.SSLPullError
+        }
+        else{
+          this.ssl_pull_error = "No Error"
+        }
+        // You can now work with the response data here.
+      },
+      (error) => {
+        console.error('API Error:', error);
+      }
+    );
   }
 
-  generateReportSummary() {
-    // Example report generation logic in table format (customize as needed).
-    this.output = `
-      <table class="table">
-      <tbody>
-        <tr>
-          <td width="260">
-          <span class="font-bold"> Parameter </span>
-          </td>
-          <td width="260">
-          <span class="font-bold">${this.inputParameter}</span>
-          </td>
-        </tr>
-        <tr>
-          <td width="260">
-          <span class="font-bold"> Parameter </span>
-          </td>
-          <td width="260">
-          <span class="font-bold">${this.isParameterPassed ? 'Yes' : 'No'}</span>
-          </td>
-        </tr>
-        <tr>
-          <td width="260">
-          <span class="font-bold"> Parameter </span>
-          </td>
-          <td width="260">
-          <span class="font-bold">${this.otherParameters}</span>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    `;
-  }
 }

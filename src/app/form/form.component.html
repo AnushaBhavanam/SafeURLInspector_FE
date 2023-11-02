@@ -1,36 +1,109 @@
 <div class="form">
-    <form (ngSubmit)="submitForm()">
-      <label for="parameter" style="font-size: 35px;">Enter Text/URL:</label>
-      <input type="text" id="parameter" [(ngModel)]="inputParameter" name="inputParameter" style="font-size: 35px;">
-      <button type="submit" style="font-size: 35px;">Submit</button>
-    </form>
+  <form (ngSubmit)="submitForm()" class="form-container">
+    <!-- <label for="parameter" style="font-size: 35px;">Text/URL:</label> -->
+    <textarea type="text" id="parameter" [(ngModel)]="inputParameter" name="inputParameter" style="font-size: 20px;"  placeholder="Enter Text/URL here"  rows="12" Required><button type="submit" style="font-size: 35px;">Check URL</button></textarea>
+    <br><button type="submit" class="pill-button" style="font-size: 35px;">Check URL</button>
+  </form>  
     <br>
-    <div class="result-box" *ngIf="output">
+    <div class="result-box" *ngIf="joutput">
+      <div class="highlight">
+        <span class="font-bold"></span>
+        <!-- {{this.joutput.ModelPrediction}} -->
+        <ng-container *ngIf="this.joutput.ModelPrediction === 'Legit Site'; else oopsMessage">
+          <span style="font-size: 50px; color: white">Legit Site</span>
+          <span style="font-size: 60px; color: green;">✔</span>
+        </ng-container>
+        <ng-template #oopsMessage><span style="font-size: 50px; color: white">Oops, Fake Site</span>
+          <span style="font-size: 60px; color: red;">✘</span> 
+        </ng-template>
+    </div>
+    
       <table class="table table-striped">
         <caption><h3>Report Summary</h3></caption>
         <tbody>
+          <tr>
+            <td width="260">
+            <span class="font-bold"> Host Name</span>
+            </td>
+            <td width="260">
+            <span class="font-bold">{{this.joutput.host_name}}</span>
+            </td>
+          </tr>
+
+          <tr>
             <tr>
               <td width="260">
-              <span class="font-bold"> Parameter </span>
+              <span class="font-bold"> SSL Availability</span>
               </td>
               <td width="260">
-              <span class="font-bold">{{this.inputParameter}}</span>
+              <span class="font-bold">{{this.joutput.ssl_cert.isSSLAvailable}}</span>
+              </td>
+            </tr>
+
+            <tr>
+              <tr>
+                <td width="260">
+                <span class="font-bold"> SSL PullError</span>
+                </td>
+                <td width="260">
+                <span class="font-bold">{{this.ssl_pull_error}}</span>
+                </td>
+              </tr>
+
+              <tr>
+            <td width="260">
+            <span class="font-bold"> Length of URL</span>
+            </td>
+            <td width="260">
+            <span class="font-bold">{{this.joutput.features.length_url}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td width="260">
+            <span class="font-bold"> Port</span>
+            </td>
+            <td width="260">
+            <span class="font-bold">{{this.joutput.port}}</span>
+            </td>
+          </tr>
+            <tr>
+              <td width="260">
+              <span class="font-bold"> Page Rank</span>
+              </td>
+              <td width="260">
+              <span class="font-bold">{{this.joutput.features.page_rank}}</span>
               </td>
             </tr>
             <tr>
               <td width="260">
-              <span class="font-bold"> Parameter </span>
+              <span class="font-bold"> Domain Age </span>
               </td>
               <td width="260">
-              <span class="font-bold">{{this.isParameterPassed ? 'Yes' : 'No'}}</span>
+              <span class="font-bold">{{this.joutput.features.domain_age}}</span>
+              </td>
+            </tr>
+            <!-- <tr>
+              <td width="260">
+              <span class="font-bold"> Model Prediction </span>
+              </td>
+              <td width="260">
+              <span class="font-bold">{{this.joutput.ModelPrediction}}</span>
+              </td>
+            </tr> -->
+            <tr>
+              <td width="260">
+              <span class="font-bold"> Date of Issue </span>
+              </td>
+              <td width="260">
+              <span class="font-bold">{{this.joutput.ssl_cert.Certificate.notBefore}}</span>
               </td>
             </tr>
             <tr>
               <td width="260">
-              <span class="font-bold"> Parameter </span>
+              <span class="font-bold"> Date of Expiry </span>
               </td>
               <td width="260">
-              <span class="font-bold">{{this.otherParameters}}</span>
+              <span class="font-bold">{{this.joutput.ssl_cert.Certificate.notAfter}}</span>
               </td>
             </tr>
             </tbody>

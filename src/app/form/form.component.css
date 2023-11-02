@@ -1,6 +1,49 @@
+/* .form-container {
+    display: flex; 
+    align-items: center;
+  } */
+
+/* button{
+    width:300px;
+    height:65px;font-family: 'Times New Roman', Times, serif;
+    color:black;
+    font-weight: bold;
+    background-color: blanchedalmond;
+    margin-left: 560px;
+} */
+
+.pill-button {
+    background-color: blanchedalmond;
+    color: #1c2f46;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 620px;
+}
+
+ textarea {
+    /* margin: 2px;
+    margin-left: 50px;
+    
+    height: 60px; */
+    flex: 1; /* Allow the textarea to expand to fill available space */
+    min-height: 50px; /* Set a minimum height to avoid collapsing when empty */
+    padding: 10px;
+    font-size: 8px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-left: 200px;
+    resize: none; /* Prevent manual resizing by the user */
+    align-items: center;
+    width: 1000px;
+  }
+
 .form{
-    text-align: center;
-    color: white;
+    
+    color: black;
     font-size: 35px;
 }
 
@@ -13,20 +56,23 @@
 
 .result-box table {
     width: 50%;
-    margin: 0 auto;
+    margin: 10px auto;
     border-collapse: collapse;
-    background-color: grey; }
+    background-color: white; }
 
 .result-box th, .result-box td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .result-box h3 {
-    background-color: none;
+    margin-bottom: 1px;
+    background-color: blanchedalmond;
     text-align: center;
-    color: white;
+    color: black;
 }
 caption {
     caption-side: top;

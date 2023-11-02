@@ -8,12 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { BackgroundComponent } from './background/background.component';
 import { FormComponent } from './form/form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { VisualizationsComponent } from './visualizations/visualizations.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  { path: 'home', component: AppComponent }, // Replace 'HomeComponent' with your actual component name
-  { path: 'about', component: MainContentComponent }, // Replace 'AboutComponent' with your actual component name
-  // Add more routes as needed
-];
+// const appRoutes: Routes = [
+//   { path: 'app', component: AppComponent },
+//   { path: 'visualization', component: VisualizationsComponent }, // Replace 'AboutComponent' with your actual component name
+// ];
+//   // Add more routes as needed
 
 @NgModule({
   declarations: [
@@ -21,12 +24,15 @@ const routes: Routes = [
     HeaderComponent,
     MainContentComponent,
     BackgroundComponent,
-    FormComponent
+    FormComponent,
+    VisualizationsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    // RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
