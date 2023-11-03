@@ -7,12 +7,15 @@ import { ApiService } from '../api.service';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+  api_error: boolean = false
   inputParameter: string = '';
-  joutput: any = null
-  ssl_pull_error: string = ""
+  joutput: any = null;
+  ssl_pull_error: string = "";
+  isLoading = false; // Add this variable
   constructor(private apiService: ApiService) {}
 
   submitForm() {
+    this.isLoading = true; // Show loading symbol when submitting
     const requestData = {
       uuid: '65162fb6-21de-4c13-9858-4ba2509e4439',
       text: this.inputParameter,
@@ -21,6 +24,7 @@ export class FormComponent {
     this.apiService.postData(requestData).subscribe(
       (response) => {
         this.joutput = response;
+        this.isLoading = false; 
         if(this.joutput.ssl_cert.SSLPullError){
           this.ssl_pull_error = this.joutput.ssl_cert.SSLPullError
         }
@@ -30,7 +34,8 @@ export class FormComponent {
         // You can now work with the response data here.
       },
       (error) => {
-        console.error('API Error:', error);
+        this.isLoading = false;
+        this.api_error = true;
       }
     );
   }

@@ -11,6 +11,7 @@ import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VisualizationsComponent } from './visualizations/visualizations.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 // const appRoutes: Routes = [
 //   { path: 'app', component: AppComponent },
@@ -25,7 +26,8 @@ import { AppRoutingModule } from './app-routing.module';
     MainContentComponent,
     BackgroundComponent,
     FormComponent,
-    VisualizationsComponent
+    VisualizationsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

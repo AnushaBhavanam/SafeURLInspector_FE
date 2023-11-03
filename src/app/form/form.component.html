@@ -1,3 +1,8 @@
+<div class="loading" *ngIf="isLoading">
+  <div class="loader">
+    </div>
+</div>
+
 <div class="form">
   <form (ngSubmit)="submitForm()" class="form-container">
     <!-- <label for="parameter" style="font-size: 35px;">Text/URL:</label> -->
@@ -5,7 +10,11 @@
     <br><button type="submit" class="pill-button" style="font-size: 35px;">Check URL</button>
   </form>  
     <br>
-    <div class="result-box" *ngIf="joutput">
+    <div class="error-message" *ngIf="api_error">
+      <span class="font-bold" style="color: white;">
+      Error: API Call Failed <span style="font-size: 60px; color: red;">✘</span> </span>
+    </div>
+    <div class="result-box" *ngIf="!isLoading && joutput">
       <div class="highlight">
         <span class="font-bold"></span>
         <!-- {{this.joutput.ModelPrediction}} -->

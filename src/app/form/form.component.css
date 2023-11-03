@@ -1,17 +1,3 @@
-/* .form-container {
-    display: flex; 
-    align-items: center;
-  } */
-
-/* button{
-    width:300px;
-    height:65px;font-family: 'Times New Roman', Times, serif;
-    color:black;
-    font-weight: bold;
-    background-color: blanchedalmond;
-    margin-left: 560px;
-} */
-
 .pill-button {
     background-color: blanchedalmond;
     color: #1c2f46;
@@ -77,3 +63,37 @@
 caption {
     caption-side: top;
 }
+.error-message {
+    text-align: center; /* Center the error message horizontally */
+    margin-top: 10px; /* Add spacing between the form and the error message */
+    font-size: 35px;
+    font-family:Arial, Helvetica, sans-serif ;
+  }
+  /* Loading overlay */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Ensure it's above other content */
+  }
+  
+  .loader {
+    border: 6px solid #f3f3f3; /* Light gray */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
