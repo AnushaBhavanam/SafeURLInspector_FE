@@ -9,7 +9,6 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { BackgroundComponent } from './background/background.component';
 import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
-import { VisualizationsComponent } from './visualizations/visualizations.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -26,7 +25,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MainContentComponent,
     BackgroundComponent,
     FormComponent,
-    VisualizationsComponent,
     DashboardComponent
   ],
   imports: [

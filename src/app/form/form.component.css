@@ -96,4 +96,37 @@ caption {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
+  /* Responsive styles for medium screens */
+@media (max-width: 768px) {
+  textarea {
+    font-size: 16px;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+
+  .pill-button {
+    font-size: 16px;
+    font-size: 16px;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  textarea {
+    font-size: 14px;
+  }
+
+  .pill-button {
+    font-size: 14px;
+  }
+}
