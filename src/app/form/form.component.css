@@ -97,36 +97,65 @@ caption {
     100% { transform: rotate(360deg); }
   }
   /* Responsive styles for medium screens */
-@media (max-width: 768px) {
+@media (max-width: 1920px) {
+  textarea {
+    width: 70%;
+    min-height: 150px;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto; /* Center horizontally within the parent division */
+  }
+  .pill-button {
+    background-color: blanchedalmond;
+    color: #1c2f46;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 18px; /* Adjust font size for responsiveness */
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; /* Center the button horizontally within its parent container */
+  }
+  
+}
+
+@media (max-width: 780px) {
   textarea {
     font-size: 16px;
     align-items: center;
     width: auto;
     height: auto;
-    margin-left: auto;
+    margin-left: 200px;
   }
 
   .pill-button {
     font-size: 16px;
-    font-size: 16px;
     align-items: center;
     width: auto;
     height: auto;
-    margin-left: auto;
+    margin-left: 230px;
   }
 }
 
 /* Responsive styles for small screens */
 @media (max-width: 576px) {
-  .form-container {
-    padding: 10px;
-  }
-
   textarea {
     font-size: 14px;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-left: 70px;
   }
 
   .pill-button {
     font-size: 14px;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-left: 90px;
   }
 }
