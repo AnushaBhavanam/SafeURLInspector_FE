@@ -17,14 +17,14 @@ export class FormComponent {
   submitForm() {
     this.isLoading = true; // Show loading symbol when submitting
     const requestData = {
-      uuid: '65162fb6-21de-4c13-9858-4ba2509e4439',
+      uuid: '1a406cfc-e0f6-4b4b-82fb-2b3f7caf54ef',
       text: this.inputParameter,
     };
 
     this.apiService.postData(requestData).subscribe(
       (response) => {
         this.joutput = response;
-        this.isLoading = false; 
+        this.isLoading = false;
         if(this.joutput.ssl_cert.SSLPullError){
           this.ssl_pull_error = this.joutput.ssl_cert.SSLPullError
         }
