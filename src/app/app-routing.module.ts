@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: 'app', component: HeaderComponent},
+  { path: '', component: HeaderComponent},
   { path: 'dashboard', component: DashboardComponent}
 ];
 
