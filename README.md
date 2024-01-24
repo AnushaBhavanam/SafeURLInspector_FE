@@ -1,27 +1,15 @@
-# Counter
+<div align="center">
+<h1>URL Rakshak</h1>
+<h3>A Safe URL Inspector</h3>
+<a href="https://pypi.org/project/Agrothon"><img alt="PyPI" src="https://img.shields.io/pypi/v/URLRakshak?style=for-the-badge"></a>
+<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/URLRakshak?style=for-the-badge">
+<img alt="PyPI - Wheel" src="https://img.shields.io/pypi/wheel/URLRakshak?style=for-the-badge">
+<img alt="PyPI - Implementation" src="https://img.shields.io/pypi/implementation/URLRakshak?style=for-the-badge">
+<img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/URLRakshak?style=for-the-badge">
+<a href="https://github.com/AnushaBhavanam/SafeURLInspector_FE/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/AnushaBhavanam/SafeURLInspector_FE?style=for-the-badge"></a>
+<a href="https://github.com/AnushaBhavanam/SafeURLInspector_FE/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/AnushaBhavanam/SafeURLInspector_FE?style=for-the-badge"></a>
+<a href="https://github.com/AnushaBhavanam/SafeURLInspector_FE/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/AnushaBhavanam/SafeURLInspector_FE?style=for-the-badge"></a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+</div>
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
