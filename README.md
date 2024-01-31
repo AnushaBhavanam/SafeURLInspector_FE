@@ -13,7 +13,7 @@
 
 ## Introduction
 
-- 🌐 **URL Extraction & Analysis**: Safe URL INSPECTOR excels in extracting URLs from any input message, ensuring a comprehensive approach to identifying potential threats.
+- 🌐 **URL Extraction & Analysis**: Safe URL INSPECTOR excels in extracting URLs from  input message or emails, ensuring a comprehensive approach to identifying potential threats.
 
 
 - 🌐 **Selenium for Real-time Analysis**: Leveraging the power of Selenium, our solution conducts real-time analysis of redirected URLs, allowing us to stay ahead of evolving counterfeit tactics.
